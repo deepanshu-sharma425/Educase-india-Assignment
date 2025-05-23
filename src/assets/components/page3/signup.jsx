@@ -1,9 +1,40 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './signup.css';
 
 function Signup() {
     const [selectedAgency, setSelectedAgency] = useState('');
+    const [formData, setFormData] = useState({
+        fullname: '',
+        email: '',
+        phone: '',
+        password: '',
+        company: ''
+    });
+    
+    const navigate = useNavigate();
+
+    const handleChange = (e) => {
+        const { id, value } = e.target;
+        setFormData({
+            ...formData,
+            [id]: value
+        });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Save user data to localStorage
+        localStorage.setItem('userData', JSON.stringify({
+            fullname: formData.fullname,
+            email: formData.email,
+            phone: formData.phone,
+            company: formData.company
+        }));
+        
+        // Navigate to profile page
+        navigate('/profile');
+    };
 
     return (
         <div className="login-container">
@@ -11,8 +42,7 @@ function Signup() {
                 <h1>Create Your</h1>
                 <h1>PopX account</h1>
 
-
-                <form className="login-form">
+                <form className="login-form" onSubmit={handleSubmit}>
                     <div className="input-group">
                         <label htmlFor="fullname">Full Name<span className="required-asterisk">*</span></label>
                         <input
@@ -20,6 +50,8 @@ function Signup() {
                             id="fullname"
                             placeholder="Enter full name"
                             required
+                            value={formData.fullname}
+                            onChange={handleChange}
                         />
                     </div>
 
@@ -30,6 +62,8 @@ function Signup() {
                             id="phone"
                             placeholder="Enter phone number"
                             required
+                            value={formData.phone}
+                            onChange={handleChange}
                         />
                     </div>
 
@@ -40,6 +74,8 @@ function Signup() {
                             id="email"
                             placeholder="Enter email address"
                             required
+                            value={formData.email}
+                            onChange={handleChange}
                         />
                     </div>
 
@@ -50,6 +86,8 @@ function Signup() {
                             id="password"
                             placeholder="Enter password"
                             required
+                            value={formData.password}
+                            onChange={handleChange}
                         />
                     </div>
 
@@ -60,6 +98,8 @@ function Signup() {
                             id="company"
                             placeholder="Enter company name"
                             required
+                            value={formData.company}
+                            onChange={handleChange}
                         />
                     </div>
 
@@ -95,8 +135,6 @@ function Signup() {
 
                     <button type="submit" className="login-button">Create Account</button>
                 </form>
-
-
             </div>
         </div>
     );
