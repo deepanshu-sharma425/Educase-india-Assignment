@@ -24,7 +24,7 @@ function Signup() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Save user data to localStorage
+
         localStorage.setItem('userData', JSON.stringify({
             fullname: formData.fullname,
             email: formData.email,
@@ -32,7 +32,7 @@ function Signup() {
             company: formData.company
         }));
         
-        // Navigate to profile page
+
         navigate('/profile');
     };
 

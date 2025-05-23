@@ -10,7 +10,7 @@ function Profile() {
     });
 
     useEffect(() => {
-        // Get user data from localStorage when component mounts
+
         const storedUserData = localStorage.getItem('userData');
         if (storedUserData) {
             const parsedData = JSON.parse(storedUserData);

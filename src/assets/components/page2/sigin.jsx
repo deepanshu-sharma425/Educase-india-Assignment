@@ -20,17 +20,16 @@ function sigin() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Extract username from email (part before @)
+
     const emailParts = formData.email.split('@');
     const username = emailParts[0];
-    
-    // Save the extracted username and email to localStorage
+
     localStorage.setItem('userData', JSON.stringify({
-      fullname: username,  // Use the part before @ as the name
+      fullname: username,  
       email: formData.email
     }));
     
-    // Navigate to profile page
+
     navigate('/profile');
   };
 
