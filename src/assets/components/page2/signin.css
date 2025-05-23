@@ -71,21 +71,9 @@
   border-color: #6c25ff;
 }
 
-.login-button {
-  width: 100%;
-  padding: 16px;
-  background-color: #cbcbcb;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  text-align: center;
-  transition: background-color 0.3s;
-}
-.login-button:hover{
-      background-color: #6c25ff;
+
+.login-button1:hover{
+      border-color: #6c25ff;
 
 }
 
@@ -106,47 +94,16 @@
 .signup-link a:hover {
   text-decoration: underline;
 }
-
-.radio-group {
-  display: flex;
-  gap: 20px;
-  margin-top: 15px;
-}
-
-.radio-option {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.login-button1{
+    width: 100%;
+  padding: 16px;
+  background-color: #cbcbcb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
   cursor: pointer;
-}
-
-.radio-option input[type="radio"] {
-  appearance: none;
-  width: 18px;
-  height: 18px;
-  border: 2px solid #ddd;
-  border-radius: 50%;
-  outline: none;
-  cursor: pointer;
-  position: relative;
-}
-
-.radio-option input[type="radio"]:checked {
-  border-color: #6C25FF;
-}
-
-.radio-option input[type="radio"]:checked::before {
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 10px;
-  height: 10px;
-  background: #6C25FF;
-  border-radius: 50%;
-}
-
-.radio-option span {
-  color: #333;
-  font-size: 14px;
+  text-align: center;
+   transition: background-color 0.3s;
 }
