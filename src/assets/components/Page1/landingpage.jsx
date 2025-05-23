@@ -14,7 +14,7 @@ function Landingpage() {
           <p>consectetur adipisicing elit.</p>
           <button 
             className='createaccount'
-            onClick={() => navigate('/sigin')}
+            onClick={() => navigate('/signup')}
           >
             Create Account
           </button>
