@@ -1,0 +1,87 @@
+
+.aboutmaindiv{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 550px;
+    /* justify-content:start; */
+    /* align-items: first baseline; */
+    padding-left: 600px;
+
+
+
+
+}
+button{
+     all: unset;
+  cursor: pointer;
+}
+.aboutmaindiv h1{
+    font-size: 32px;
+
+
+}
+.aboutmaindiv p{
+    font-size: 18px;
+    color: #75777b;
+}
+.createaccount{
+    background-color: #6c25ff;
+    color: white;
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    border-radius: 6px;
+}
+.already{
+        background-color: rgb(204, 185, 250);
+
+    text-align: center;
+   width: 300px;
+    height: 50px;
+    border-radius: 6px;
+
+}
+
+
+
+@media (max-width: 1200px) {
+    .aboutmaindiv {
+        padding-left: 400px;
+    }
+}
+
+@media (max-width: 992px) {
+    .aboutmaindiv {
+        padding-left: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutmaindiv {
+        padding-left: 100px;
+        padding-top: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .aboutmaindiv {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 200px;
+        align-items: center;
+    }
+    
+    .aboutmaindiv h1 {
+        font-size: 28px;
+    }
+    
+    .aboutmaindiv p {
+        font-size: 16px;
+    }
+    
+    .createaccount, .already {
+        width: 100%;
+        max-width: 300px;
+    }
+}
